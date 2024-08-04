@@ -15,6 +15,16 @@
  * 6. Return the array
  */
 
+/**
+ * Pattern and concepts:
+ * 1. Key-value pairs => Map
+ * 2. Merging objects => Spread operator
+ * 3. Sorting => Sort
+ * 4. Adding to a map => set
+ * 5. Checking if a key exists in a map => has
+ * 6. Getting a value from a map => get
+ */
+
 var join = function (arr1, arr2) {
   const joinedMap = new Map();
 
