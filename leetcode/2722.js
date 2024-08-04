@@ -5,13 +5,14 @@
  * @return {Array}
  */
 
-/** Psuedo-Code
- * Input: arr1, arr2 => each array contains an object with an id field that has an integer value
- * Output: new array joinedArray (initialized as empty)
- *  If id in arr1 is equal to id in arr2, merge the two objects into a single object
- *  Should be sorted in ascending order by id
- *  If id in arr1 is not in arr2, add the object from arr1 to joinedArray w/ no modifications
- *  Note: arr2 overrides arr1 if there are duplicate ids
+/**
+ * Plan:
+ * 1. Create a map to store the objects from arr1
+ * 2. Iterate through arr2
+ * 3. If the id is in the map, merge the objects
+ * 4. If the id is not in the map, add the object to the map
+ * 5. Convert the map to an array and sort
+ * 6. Return the array
  */
 
 var join = function (arr1, arr2) {
