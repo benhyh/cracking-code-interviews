@@ -26,22 +26,37 @@
  */
 
 var join = function (arr1, arr2) {
+  // Create a map to store the objects from arr1
   const joinedMap = new Map();
 
   // Process arr1
   for (let obj of arr1) {
-    joinedMap.set(obj.id, obj);
+    joinedMap.set(obj.id, obj); // Add to map
   }
 
   // Process arr2, merging or adding as needed
   for (let obj of arr2) {
     if (joinedMap.has(obj.id)) {
-      joinedMap.set(obj.id, { ...joinedMap.get(obj.id), ...obj });
+      joinedMap.set(obj.id, { ...joinedMap.get(obj.id), ...obj }); // Merge objects if id exists in map
     } else {
-      joinedMap.set(obj.id, obj);
+      joinedMap.set(obj.id, obj); // Add to map if id does not exist
     }
   }
 
   // Convert to array and sort
   return Array.from(joinedMap.values()).sort((a, b) => a.id - b.id);
 };
+
+// Test cases
+console.log(
+  join(
+    [
+      { id: 1, name: "John" },
+      { id: 2, name: "Jane" },
+    ],
+    [
+      { id: 1, age: 30 },
+      { id: 2, age: 25 },
+    ]
+  )
+); // [{ id: 1, name: 'John', age: 30 }, { id: 2, name: 'Jane', age: 25 }]
