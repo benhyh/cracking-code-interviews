@@ -1,3 +1,3 @@
 # Daily DSA Practice
 
-## Meant to log my progress as I work through the textbook
+## Purpose: To log my progress as I work through textbooks, leetcode problems, DSA practices.
